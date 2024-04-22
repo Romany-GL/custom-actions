@@ -1,0 +1,14 @@
+name: 'Greeting action'
+description: 'Greet someone and record the time'
+inputs:
+  your-name:
+    type: string
+    description: 'who to greet'
+    required: true
+    default: 'World'
+  outputs:
+    time:
+      description: 'The time of greeting'
+  runs:
+    using: 'node20'
+    main: 'index.js'
