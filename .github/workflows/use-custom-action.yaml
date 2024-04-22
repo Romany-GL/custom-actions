@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: use the custom action to greet the user
         id: greeting
-        uses: Romany-GL/custom-actions@v1.1
+        uses: Romany-GL/custom-actions@v1.2
         with:
           your-name: ${{inputs.user-name}}
       - name: print the output from action
