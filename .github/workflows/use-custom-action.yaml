@@ -4,12 +4,10 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: use the custom action to greet the user
+        id: greeting
+        uses: Romany-GL/custom-actions@v1.1
         with:
-          node-version: 20
-          cache: 'npm'
-      - name: list-repo-files
-        run: |
-          ls -a
-          node -v
+          your-name: Rooma
+      - name: print the output from action
+        run: echo  " the time was  ${{ steps.greeting.outputs.time }}"
